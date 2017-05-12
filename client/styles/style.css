@@ -1,0 +1,7 @@
+.md-calendar-date .md-calendar-date-selection-indicator {
+  background-color: lightgreen;
+}
+
+.md-calendar-date-disabled {
+  background-color: salmon;
+}

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Chi MEAN</title>
 
-    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/angular-material/angular-material.css">
     <link rel="stylesheet" href="styles/style.css" />
 
     <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
@@ -18,6 +19,22 @@
 
   </head>
   <body>
+    <main ng-controller="MainController as ctrl" layout="row" flex>
+      <div layout layout-align="center center" flex>
+        <md-datepicker
+          ng-model="ctrl.myDate"
+          md-min-date="ctrl.minDate" md-max-date="ctrl.maxDate"
+          md-date-filter="ctrl.onlyMonToThursPredicate">
+        </md-datepicker>
+      </div>
+      <div layout layout-align="center center" flex>
+        <md-calendar
+          ng-model="ctrl.myDate"
+          md-min-date="ctrl.minDate" md-max-date="ctrl.maxDate"
+          md-date-filter="ctrl.onlyMonToThursPredicate">
+        </md-calendar>
+      </div>
+    </main>
 
   </body>
 </html>
